@@ -11,18 +11,18 @@ function App() {
   return (
     <>
     
+        <Router>
     <Header />
       <main className="container content">
-        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contacts" component={Contact} />
             <Route component={NotFound}/>
           </Switch>
-        </Router>
       </main>
       <Footer/>
+        </Router>
     </>
     
   );

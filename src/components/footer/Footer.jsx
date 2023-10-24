@@ -2,7 +2,7 @@ import "./footer.css"
 
 const Footer = () => {
   return (
-    <footer className="page-footer  #2196f3 brown">
+    <footer className="page-footer blue ">
       <div className="footer-copyright">
         <div className="container">
           © {new Date().getFullYear()} Copyright Text

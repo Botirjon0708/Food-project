@@ -16,4 +16,4 @@ function Preloader() {
     );
 }
 
-export {Preloader}
+export default Preloader

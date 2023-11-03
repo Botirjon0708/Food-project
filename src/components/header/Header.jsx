@@ -7,7 +7,7 @@ const Header = () => {
     <nav className="green lighten-2">
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo">
-          React - food
+      Food
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>

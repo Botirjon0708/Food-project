@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import MealList from "../components/mealList/MealList";
 import Preloader from "../components/preloader/Preloader";
@@ -18,6 +19,13 @@ const Category = () => {
 
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
+        <title>Food</title>
+      </Helmet>
       <button className="btn" onClick={goBack}>
         Go back
       </button>

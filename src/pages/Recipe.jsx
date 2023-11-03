@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory  } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import Preloader from "../components/preloader/Preloader";
 import { getMealById } from "../api";
 
@@ -30,6 +32,13 @@ const {goBack} = useHistory()
 
     return (
       <>
+        <Helmet>
+        <meta
+          name="description"
+          content={`Recipe ${strMeal}`}
+          />
+        <title>{strMeal}</title>
+          </Helmet>
         {!idMeal ? (
           <Preloader />
         ) : (
@@ -45,7 +54,6 @@ const {goBack} = useHistory()
                   <th>Ingredient</th>
                   <th>Measure</th>
                 </tr>
-                
               </thead>
               <tbody>
                 {Object.keys(recipe).map((key) => {
@@ -75,7 +83,9 @@ const {goBack} = useHistory()
             ) : null}
           </div>
         )}
-        <button className="btn" onClick={goBack}>Go Back</button>
+        <button className="btn" onClick={goBack}>
+          Go Back
+        </button>
       </>
     );
 }
